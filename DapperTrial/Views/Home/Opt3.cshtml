@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@Model List<Country>
+    @{
+        ViewData["Title"] = "European countries Page";
+    }
+    
+    <div class="text-center">
+        <h1 class="display-4">This page presents the European countries ordered by life expectancy, high to low</h1>
+    </div>
+
+    <table>
+        <tr>
+            <td>Country Code</td>
+            <td>Country Name</td>
+            <td>Continent</td>
+            <td>Life Expectancy</td>
+        </tr>
+        @foreach (Country country in @Model)
+        {
+            <tr>
+                <td>@country.Code</td>
+                <td>@country.Name</td>
+                <td>@country.Continent</td>
+                <td>@country.LifeExpectancy</td>
+            </tr>
+        }
+
+    </table>
+

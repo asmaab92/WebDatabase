@@ -1,0 +1,23 @@
+﻿@Model List<City>
+    @{ ViewData["Title"] = "CountryCode Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<h1>Cities shown by the country code</h1>
+
+<table>
+    <tr>
+        <td>City Name</td>       
+        <td>Country Code</td>
+    </tr>
+    @foreach (City city in @Model)
+    {
+        <tr>
+            <td>@city.Name</td>
+            <td>@city.CountryCode</td>
+        </tr>
+    }
+
+</table>
